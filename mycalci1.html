@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mycalci11.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Let's Calculate</h1>
+        <div class="calci">
+            <input type="text" name="" id="input" placeholder="0">
+            <div>
+                <button class="operator">AC</button>
+                <button class="operator">DEL</button>
+                <button class="operator">%</button>
+                <button class="operator" >/</button>
+
+            </div>
+            <div>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator">*</button>
+
+            </div>
+
+
+            <div>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator" >-</button>
+
+            </div>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator" >+</button>
+
+            </div>
+
+            <div>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button class=" last" >=</button>
+                
+
+            </div>
+           <!-- <script>
+            let Button = document.querySelectorAll('button');
+            let input = document.querySelector('#input');
+
+            let string = "";
+            let arr = Array.from(Button);
+            arr.forEach(
+                Button=>{
+                    Button.addEventListener('click',(e)=>{
+                        if(e.target.innerHTML=='='){
+                            string = eval(string);
+                            input.value=string;
+                        }
+                        else if(e.target.innerHTML == 'AC'){
+                            string="";
+                            input.value=string;
+
+                        }
+                        else if(e.target.innerHTML=='DEL'){
+                            string = string.substring(0,string.length-1);
+                            input.value=string;
+
+                        }
+                        else{
+                            string +=e.target.innerHTML;
+                            input.value=string;
+                        };
+                    });
+                }
+            )
+
+
+           </script> -->
+
+           <script>
+
+            let Button = document.querySelectorAll('button');
+            let Input = document.querySelector('#input');
+            let string= "";
+
+            let arr = Array.from(Button);
+            arr.forEach(
+              Button=>{
+                Button.addEventListener('click',(e)=>{
+                    if(e.target.innerHTML=='='){
+                            string = eval(string);
+                            input.value=string;
+                        }
+                        else if(e.target.innerHTML == 'AC'){
+                            string="";
+                            input.value=string;
+
+                        }
+                        else if(e.target.innerHTML=='DEL'){
+                            string = string.substring(0,string.length-1);
+                            input.value=string;
+
+                        }
+                        else{
+                            string +=e.target.innerHTML;
+                            input.value=string;
+                        };
+                });
+              }
+            )
+
+           </script>
+        </div>
+    </div>
+</body>
+</html>
